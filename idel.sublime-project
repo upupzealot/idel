@@ -1,0 +1,10 @@
+{
+	"folders": [{
+			"path": "."
+		}, {
+			"path": "node_modules/.3.3.7@bootstrap/less"
+	}],
+	"settings": {
+		"tab_size": 2
+	}
+}

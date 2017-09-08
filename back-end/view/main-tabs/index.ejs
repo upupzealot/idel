@@ -1,0 +1,51 @@
+<% const tabs = ['resource', 'character']; %>
+<% const defaultTab = 'resource'; %>
+
+<% function tryInclude(path) {
+    try {
+      return include(path);
+    } catch(e) {
+      return e;
+    }
+  }
+%>
+
+<div style="margin-top: 50px;">
+  <div class="tab-content">
+
+    <% tabs.forEach(tab => {
+      const active = tab === defaultTab ? 'active' : ''; %>
+
+      <div class="tab-pane fade in <%- active %>"
+        id="<%- tab %>">
+
+        <%- tryInclude('./' + tab); %>
+
+      </div>
+      
+    <% }) %>
+
+  </div>
+</div>
+
+<!-- tabs btns -->
+<nav class="navbar navbar-default navbar-fixed-bottom" style="min-height: initial;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <ul id="main-tabs" class="nav nav-pills">
+
+      <% tabs.forEach(tab => {
+        const active = tab === defaultTab ? 'active' : ''; %>
+
+        <li class="<%- active %>">
+          <a href="#<%- tab %>" id="<%- tab %>-tab" data-toggle="tab">
+            <%- tab %>
+          </a>
+        </li>
+
+      <% }) %>
+
+      </ul>
+    </div>
+  </div>
+</nav>

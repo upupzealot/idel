@@ -1,0 +1,30 @@
+{
+  "name": "idel",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "NODE_ENV=develop pm2 start . --name=idel --watch",
+    "build": "webpack --watch"
+  },
+  "author": "Eric",
+  "license": "MIT",
+  "dependencies": {
+    "koa": "^2.3.0",
+    "koa-ejs": "^4.1.0",
+    "koa-router": "^7.2.1",
+    "koa-static": "^4.0.1"
+  },
+  "devDependencies": {
+    "bootstrap": "^3.3.7",
+    "css-loader": "^0.28.7",
+    "eslint": "^4.6.1",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "file-loader": "^0.11.2",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.5",
+    "style-loader": "^0.18.2",
+    "url-loader": "^0.5.9",
+    "webpack": "^3.5.5"
+  }
+}
