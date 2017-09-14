@@ -24,5 +24,9 @@ module.exports = {
   },
   externals: {
     jquery: 'window.$',
+    lodash: 'window._',
+  },
+  watchOptions: {
+    ignored: /node_modules/,
   },
 };
